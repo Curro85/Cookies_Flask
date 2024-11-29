@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bienvenido</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Bienvenido a mi página</h1>
+    {% if not mostrar_cookies %}
+        <p>Hemos guardado sus preferencias respecto a las cookies</p>
+    {% elif mostrar_cookies %}
+    <div id="cookies">
+        <form action="{{ url_for('home') }}" method="post">
+            <p>Esta página almacena datos en forma de cookies, ¿está usted de acuerdo?</p>
+            <button type="submit" name="btn" value="aceptar">Aceptar</button>
+            <button type="submit" name="btn" value="rechazar">Rechazar</button>
+        </form>
+        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">Políticas de cookies</a>
+    </div>
+    {% endif %}
+</body>
+</html>

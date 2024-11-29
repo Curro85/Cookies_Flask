@@ -1,0 +1,33 @@
+@keyframes cookies {
+    from {
+        bottom: -200px;
+    }
+    to {
+        bottom: 0;
+    }
+}
+
+#cookies {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: cadetblue;
+    text-align: center;
+    padding: 10px;
+    animation-name: cookies;
+    animation-duration: 1s;
+}
+
+button {
+    background-color: lightskyblue;
+    border: 3px solid lightskyblue;
+    border-radius: 10px;
+    color: white;
+    margin: 5px;
+    transition: 0.5s;
+}
+
+button:hover {
+    background-color: dodgerblue;
+}
